@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript programs</h1>
+    <script>
+        // 1. Array join and split
+const fruits = ["apple", "banana", "cherry"];
+const joinedFruits = fruits.join(", ");
+console.log("Joined Fruits:", joinedFruits);
+
+const splitFruits = joinedFruits.split(", ");
+console.log("Split Fruits:", splitFruits);
+
+// 2. Array destructuring
+const [firstFruit, secondFruit, thirdFruit] = fruits;
+console.log("First Fruit:", firstFruit);
+console.log("Second Fruit:", secondFruit);
+console.log("Third Fruit:", thirdFruit);
+
+// 3. Array spreading
+const moreFruits = ["orange", "grape"];
+const allFruits = [...fruits, ...moreFruits];
+console.log("All Fruits:", allFruits);
+
+// 4. Array of finding max and min
+const numbers = [1, 2, 3, 4, 5];
+const maxNumber = Math.max(...numbers);
+const minNumber = Math.min(...numbers);
+console.log("Max Number:", maxNumber);
+console.log("Min Number:", minNumber);
+
+// 5. Flattening array
+const nestedArray = [1, [2, [3, [4, 5]]]];
+const flatArray = nestedArray.flat(Infinity);
+console.log("Flattened Array:", flatArray);
+
+// 6. Checking array elements
+const hasApple = fruits.includes("apple");
+const allNumbersGreaterThanZero = numbers.every(num => num > 0);
+const someNumbersGreaterThanThree = numbers.some(num => num > 3);
+console.log("Has Apple:", hasApple);
+console.log("All Numbers Greater Than Zero:", allNumbersGreaterThanZero);
+console.log("Some Numbers Greater Than Three:", someNumbersGreaterThanThree);
+
+// 7. Array of object sorting
+const people = [
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 },
+    { name: "Jim", age: 35 }
+];
+people.sort((a, b) => a.age - b.age);
+console.log("Sorted People by Age:", people);
+
+// 8. Merging the arrays
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const mergedArray = [...array1, ...array2];
+console.log("Merged Array:", mergedArray);
+
+// 9. Creating new array with a given length
+const length = 5;
+const newArray = Array.from({ length }, (_, i) => i + 1);
+console.log("New Array with Length:", newArray);
+
+// 10. Array deduplication
+const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+const deduplicatedArray = [...new Set(arrayWithDuplicates)];
+console.log("Deduplicated Array:", deduplicatedArray);
+    </script>
+</body>
+</html>
